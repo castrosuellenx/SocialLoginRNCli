@@ -1,9 +1,13 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components/native';
 
-import Home from './screens/Home';
+import Routes from './routes';
+import { dark } from './styles/theme';
 
-const App: React.FC = () => {
-  return <Home />;
-};
+const App: React.FC = () => (
+  <ThemeProvider theme={dark}>
+    <Routes />
+  </ThemeProvider>
+);
 
 export default App;
