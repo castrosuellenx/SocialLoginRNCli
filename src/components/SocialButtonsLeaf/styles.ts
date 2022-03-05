@@ -22,7 +22,9 @@ export const WrapperBottom = styled.View`
   justify-content: space-between;
 `;
 
-export const Button = styled.TouchableOpacity<ButtonProps>`
+export const Button = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.5,
+})<ButtonProps>`
   width: ${RFValue(100)}px;
   height: ${RFValue(100)}px;
   align-items: center;
