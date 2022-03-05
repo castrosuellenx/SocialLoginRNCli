@@ -34,13 +34,3 @@ export const TextWithoutAccount = styled.Text`
   color: ${({ theme }) => theme.colors.text.primary};
   margin-right: ${RFValue(5)}px;
 `;
-
-export const Button = styled.TouchableOpacity.attrs({
-  activeOpacity: 0.7,
-})``;
-
-export const ButtonText = styled.Text`
-  font-family: ${({ theme }) => theme.fontFamily.bold};
-  font-size: ${RFValue(16)}px;
-  color: ${({ theme }) => theme.colors.button.background};
-`;
