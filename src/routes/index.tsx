@@ -3,17 +3,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useTheme } from 'styled-components/native';
 
-import SignIn from '@/screens/Auth/SignIn';
-import SignUp from '@/screens/Auth/SignUp';
-import Home from '@/screens/Home';
+import SignIn from '@/screens/SignIn';
+import Profile from '@/screens/Profile';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace ReactNavigation {
     interface RootParamList {
       SignIn: undefined;
-      SignUp: undefined;
-      Home: undefined;
+      Profile: undefined;
     }
   }
 }
@@ -27,16 +26,14 @@ const Routes: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerTitleStyle: {
-            fontFamily: theme.fontFamily.bold,
-            color: theme.colors.text.primary,
-          },
-          headerTitleAlign: 'center',
-          headerStyle: { backgroundColor: theme.colors.background.light },
+          headerShown: false,
         }}>
-        <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="SignIn"
+          component={SignIn}
+          options={{ title: 'Login' }}
+        />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );
