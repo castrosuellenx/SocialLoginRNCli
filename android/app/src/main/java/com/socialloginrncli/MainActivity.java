@@ -1,5 +1,9 @@
 package com.socialloginrncli;
 
+// -- Add import to react native screens (react navigation setup installation)
+import android.os.Bundle;
+//
+
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -12,4 +16,11 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "SocialLoginRNCli";
   }
+
+  // -- Add config to react native screens (react navigation setup installation)
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
+  // --
 }
